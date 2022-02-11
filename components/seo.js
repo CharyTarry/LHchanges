@@ -1,7 +1,8 @@
 import Head from 'next/head';
+import Script from 'next/script';
 
 const SEO = ({
-	description = 'Liquid Hack Group with its curated team of technical experts is able to deliver high-end software solutions to its dedicated customers.',
+	description = 'Web and application design, Web and application development, search engine optimization, search engine marketing, Business Automations.',
 	author = 'LiquidHackGroup',
 	meta,
 	title = 'Liquid Hack Group',
@@ -42,18 +43,19 @@ const SEO = ({
 	].concat(meta);
 
 	return (
-		<Head>
-			<link rel="shortcut icon" href="/icon.jpeg" />
-
-			<script
-				type="module"
+		<>
+			<Head>
+				<link rel="shortcut icon" href="/icon.jpeg" sizes="32x32" />
+				<title>{title}</title>
+				{metaData.map(({ name, content }, i) => (
+					<meta key={i} name={name} content={content} />
+				))}
+			</Head>
+			<Script
+				type="text/javascript"
 				src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-			></script>
-			<title>{title}</title>
-			{metaData.map(({ name, content }, i) => (
-				<meta key={i} name={name} content={content} />
-			))}
-		</Head>
+			></Script>
+		</>
 	);
 };
 
