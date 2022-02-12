@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Script from 'next/script';
 
 const SEO = ({
-	description = 'Web and application design, Web and application development, search engine optimization, search engine marketing, Business Automations.',
+	description = 'Specialist in web and application design, web and application development, search engine optimization, search engine marketing, networking and security systems.',
 	author = 'LiquidHackGroup',
 	meta,
 	title = 'Liquid Hack Group',
@@ -52,8 +52,9 @@ const SEO = ({
 				))}
 			</Head>
 			<Script
-				type="text/javascript"
+				type="module"
 				src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+				strategy="afterInteractive"
 			></Script>
 		</>
 	);
