@@ -6,7 +6,7 @@ import { Button } from '../components';
 const Navbar = () => {
 	const [open, setOpen] = useState(false);
 	return (
-		<div className="shadow-md w-full fixed top-0 left-0 bg-black-600">
+		<div className="shadow-md w-screen fixed z-40 top-0 left-0 bg-black-600">
 			<div className="md:flex items-center max-w-7xl mr-auto ml-auto justify-between  py-4 px-7 md:px-10">
 				<div className="cursor-pointer flex items-center">
 					<Image

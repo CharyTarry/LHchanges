@@ -47,6 +47,7 @@ const SEO = ({
 			<Head>
 				<link rel="shortcut icon" href="/icon.jpeg" sizes="32x32" />
 				<title>{title}</title>
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				{metaData.map(({ name, content }, i) => (
 					<meta key={i} name={name} content={content} />
 				))}

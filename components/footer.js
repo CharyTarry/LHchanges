@@ -4,8 +4,8 @@ import Image from 'next/image';
 
 const Footer = () => {
 	return (
-		<div className="w-full min-h-[300px] bg-black-600 mt-[-5px] pt-16">
-			<div className="md:flex items-center justify-around max-w-7xl mr-auto ml-auto py-4 px-7 md:px-10">
+		<div className=" bg-black-600 w-screen mt-[-5px] pt-16">
+			<div className="md:flex items-center justify-around max-auto md:max-w-7xl mr-auto ml-auto py-4 px-7 md:px-10">
 				<div className="cursor-pointer flex items-start w-64">
 					<Image
 						src="https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/c_scale,h_52,w_140/v1641167608/LiquidHack_1_aoh2xd.png"
@@ -64,8 +64,8 @@ const Footer = () => {
 								<li
 									key={index}
 									className="my-1 ml-2 cursor-pointer"
-									data-tooltip-target="tooltip-bottom"
-									data-tooltip-placement="bottom"
+									// data-tooltip-target="tooltip-bottom"
+									// data-tooltip-placement="bottom"
 								>
 									<Link href={link.link} passHref>
 										<Image
@@ -77,14 +77,14 @@ const Footer = () => {
 									</Link>
 								</li>
 
-								<div
+								{/* <div
 									id="tooltip-bottom"
 									role="tooltip"
 									className="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-black-600 bg-white rounded-lg shadow-sm opacity-0 tooltip"
 								>
 									{link.name}
 									<div className="tooltip-arrow" data-popper-arrow></div>
-								</div>
+								</div> */}
 							</Fragment>
 						))}
 					</ul>

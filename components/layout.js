@@ -7,7 +7,9 @@ const Layout = ({ children }) => {
 		<>
 			<SEO title="Liquid Hack Group" />
 			<Navbar />
-			<main className="bg-black-600 py-2 w-full min-h-screen">{children}</main>
+			<main className="bg-black-600 py-2 w-screen min-h-screen">
+				{children}
+			</main>
 			<Footer />
 		</>
 	);
