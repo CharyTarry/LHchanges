@@ -1,10 +1,10 @@
-import React from 'react';
+import { Layout, AboutSection } from '../components';
 
 const About = () => {
 	return (
-		<div>
-			<h1 className="text-center py-8 text-3xl underline">About</h1>
-		</div>
+		<Layout>
+			<AboutSection />
+		</Layout>
 	);
 };
 

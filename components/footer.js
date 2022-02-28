@@ -67,14 +67,14 @@ const Footer = () => {
 									// data-tooltip-target="tooltip-bottom"
 									// data-tooltip-placement="bottom"
 								>
-									<Link href={link.link} passHref>
+									<a href={link.link}>
 										<Image
 											alt="social media icons"
 											src={link.img}
 											width={24}
 											height={24}
 										/>
-									</Link>
+									</a>
 								</li>
 
 								{/* <div

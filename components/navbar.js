@@ -59,11 +59,11 @@ const links = [
 	},
 	{
 		name: 'About Us',
-		link: '/',
+		link: '/about',
 	},
 	{
 		name: 'Services',
-		link: '/',
+		link: '/services',
 	},
 	{
 		name: 'Portfolio',

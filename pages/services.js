@@ -1,10 +1,10 @@
-import React from 'react';
+import { Layout, ServicesSection } from '../components';
 
 const Services = () => {
 	return (
-		<div>
-			<h1 className="text-center py-8 text-3xl underline">Services</h1>
-		</div>
+		<Layout>
+			<ServicesSection />
+		</Layout>
 	);
 };
 

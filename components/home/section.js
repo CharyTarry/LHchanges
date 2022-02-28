@@ -5,7 +5,7 @@ import Button from './button';
 const Section = () => {
 	return (
 		<>
-			<div className="bg-black-600 mt-16">
+			<div className="bg-black-600 mt-28">
 				<div className="md:flex items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
 					<div className="md:flex items-center w-full">
 						<div className="md:w-5/12 w-full">
@@ -31,8 +31,15 @@ const Section = () => {
 					</div>
 				</div>
 			</div>
-			<div className="bg-black-600">
-				<div className="md:flex items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
+			<div
+				className="bg-black-600 bg-local bg-cover bg-no-repeat min-h-min"
+				style={{
+					backgroundImage: `url(
+						'https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1644582842/90631_ex8fml.png'
+					)`,
+				}}
+			>
+				<div className="md:flex pt-32 items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
 					<div className="md:flex items-center w-full">
 						<div className="flex justify-start md:w-7/12 w-full ">
 							<div className="md:w-8/12 w-full">
