@@ -96,7 +96,7 @@ const Section = () => {
 			</div>
 			<div className="bg-black-600 mt-16 min-h-screen">
 				<header className="relative flex items-center justify-center mb-12 h-screen overflow-hidden">
-					<div class="relative z-30 p-5 text-2xl text-white bg-white bg-opacity-50 rounded-xl">
+					<div className="relative z-30 p-5 text-2xl text-white bg-white bg-opacity-50 rounded-xl">
 						Play
 					</div>
 					<video
