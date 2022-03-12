@@ -27,7 +27,7 @@ const Navbar = () => {
 					)}
 				</div>
 				<ul
-					className={`flex items-center flex-col md:flex-row absolute md:static md:rounded-b-none rounded-b-xl md:pb-0 pb-6 left-0 w-full md:w-auto md:bg-black-600 bg-glass-300 md:z-auto z-[-1] transition-all duration-500 ease-in ${
+					className={`flex items-center flex-col md:flex-row absolute shadow-md md:static md:rounded-b-none rounded-b-xl md:pb-0 pb-6 left-0 w-full md:w-auto md:bg-black-600 bg-glass-300 md:z-auto z-[-1] transition-all duration-500 ease-in ${
 						open ? 'top-20' : 'top-[-490px]'
 					}`}
 				>
@@ -65,16 +65,16 @@ const links = [
 		name: 'Services',
 		link: '/services',
 	},
-	{
-		name: 'Portfolio',
-		link: '/',
-	},
+	// {
+	// 	name: 'Portfolio',
+	// 	link: '/',
+	// },
 	{
 		name: 'Blog',
-		link: '/',
+		link: '/blog',
 	},
 	{
 		name: 'Contact',
-		link: '/',
+		link: '/contact',
 	},
 ];

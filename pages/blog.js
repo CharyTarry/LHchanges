@@ -1,10 +1,10 @@
-import React from 'react';
+import { Layout, BlogSection } from '../components';
 
 const Blog = () => {
 	return (
-		<div>
-			<h1 className="text-center py-8 text-3xl underline">Blog</h1>
-		</div>
+		<Layout>
+			<BlogSection />
+		</Layout>
 	);
 };
 

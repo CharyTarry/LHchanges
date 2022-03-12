@@ -5,10 +5,10 @@ import Button from './button';
 const Section = () => {
 	return (
 		<>
-			<div className="bg-black-600 mt-28">
+			<div className="bg-black-600 mt-28 min-h-screen">
 				<div className="md:flex items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
 					<div className="md:flex items-center w-full">
-						<div className="flex justify-start md:w-6/12 w-full">
+						<div className="flex justify-start mb-8 md:mb-0 md:w-6/12 w-full">
 							<div className="md:w-9/12 w-full">
 								<h5 className="mt-3 text-white">
 									Services/Web & Mobile Development
@@ -48,7 +48,7 @@ const Section = () => {
 					</div>
 				</div>
 			</div>
-			<div className="bg-black-600 mt-14">
+			<div className="bg-black-600 mt-14 min-h-screen">
 				<div className="md:flex items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
 					<div className="md:flex items-center w-full">
 						<div className="md:w-5/12 w-full">
@@ -79,10 +79,10 @@ const Section = () => {
 					</div>
 				</div>
 			</div>
-			<div className="bg-black-600 mt-14">
+			<div className="bg-black-600 mt-14 min-h-screen">
 				<div className="md:flex items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
 					<div className="md:flex items-center w-full">
-						<div className="flex justify-start md:w-6/12 w-full">
+						<div className="flex justify-start mb-8 md:mb-0 md:w-6/12 w-full">
 							<div className="md:w-9/12 w-full">
 								<h5 className="mt-3 text-white">Services/System Engineering</h5>
 								<h1 className="mt-0.5 text-white pt-8 text-3xl md:text-4xl font-bold">

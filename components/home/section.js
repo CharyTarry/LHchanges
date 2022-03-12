@@ -5,7 +5,7 @@ import Button from './button';
 const Section = () => {
 	return (
 		<>
-			<div className="bg-black-600 mt-28">
+			<div className="bg-black-600 mt-28 min-h-screen">
 				<div className="md:flex items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
 					<div className="md:flex items-center w-full">
 						<div className="md:w-5/12 w-full">
@@ -32,7 +32,7 @@ const Section = () => {
 				</div>
 			</div>
 			<div
-				className="bg-black-600 bg-local bg-cover bg-no-repeat min-h-min"
+				className="bg-black-600 bg-local bg-cover bg-no-repeat min-h-screen"
 				style={{
 					backgroundImage: `url(
 						'https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1644582842/90631_ex8fml.png'
@@ -41,7 +41,7 @@ const Section = () => {
 			>
 				<div className="md:flex pt-32 items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
 					<div className="md:flex items-center w-full">
-						<div className="flex justify-start md:w-7/12 w-full ">
+						<div className="flex justify-start mb-8 md:mb-0 md:w-7/12 w-full ">
 							<div className="md:w-8/12 w-full">
 								<h1 className="text-white pt-8 text-3xl md:text-5xl font-bold">
 									Web Design and Brand Identity
@@ -66,7 +66,7 @@ const Section = () => {
 					</div>
 				</div>
 			</div>
-			<div className="bg-black-600 mt-16">
+			<div className="bg-black-600 mt-16 min-h-screen">
 				<div className="md:flex items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
 					<div className="md:flex items-center w-full">
 						<div className="md:flex justify-start md:w-6/12 w-full">
@@ -93,6 +93,25 @@ const Section = () => {
 						</div>
 					</div>
 				</div>
+			</div>
+			<div className="bg-black-600 mt-16 min-h-screen">
+				<header className="relative flex items-center justify-center mb-12 h-screen overflow-hidden">
+					<div class="relative z-30 p-5 text-2xl text-white bg-white bg-opacity-50 rounded-xl">
+						Play
+					</div>
+					<video
+						autoPlay
+						loop
+						muted
+						className="absolute z-10 w-auto min-w-full min-h-full max-w-none"
+					>
+						<source
+							src="https://res.cloudinary.com/dgisuffs0/video/upload/q_auto/v1646976061/LiquidHackGroupVideo_jsdi2b.mp4"
+							type="video/mp4"
+						/>
+						Your browser does not support the video tag.
+					</video>
+				</header>
 			</div>
 		</>
 	);
