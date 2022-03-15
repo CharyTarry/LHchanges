@@ -16,17 +16,25 @@ const Section = () => {
 								</h1>
 								<h4 className="mt-2 text-white text-base md:text-2xl">
 									We take pride in doing things well and achieving the best
-									results we can
+									results we can.
 								</h4>
 								<p className="mt-8 text-white">
-									Our talented team adapt at using sophisticated tools and
-									techniques to offer you world class web development services.
-									Our talented team adapt at using sophisticated tools and
-									techniques to offer you world class web development services.
+									Liquid Hack Group with its curated team of technical experts
+									is able to deliver high-end software solutions to its
+									dedicated customers. We are engrossed in offering effective
+									software solutions to clients to help them to grow in their
+									respective business domains.
 								</p>
 								<p className="mt-5 mb-4 text-white">
-									Our talented team adapt at using sophisticated tools and
-									techniques to offer you world class web development services.
+									Right from web design to web & application development &
+									business process outsourcing, we do everything as per clients’
+									requirements to ensure that their goals are being met.
+								</p>
+								<p className="mt-5 mb-4 text-white">
+									We thrive on driving success for your business and we are
+									experts in research and strategy development in order to
+									provide the most updated solutions. We aim for flexibility for
+									effective and efficient execution.
 								</p>
 								<Button>View Our Capabilities</Button>
 							</div>
