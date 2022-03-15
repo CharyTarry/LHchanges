@@ -114,16 +114,17 @@ const Section = () => {
 					</div>
 				</div>
 			</div>
-			<div className="bg-black-600 mt-16 min-h-screen">
-				<header className="relative flex items-center justify-center mb-12 h-screen overflow-hidden">
-					<div className="relative z-30 p-5 text-2xl text-white bg-white bg-opacity-50 rounded-xl">
+			<div className="bg-black-600 mt-16 md:min-h-screen">
+				<div className="relative flex items-center justify-center py-4 px-7 mb-12 md:h-screen">
+					{/* <div className="relative z-30 p-5 text-2xl text-white bg-white bg-opacity-50 rounded-xl">
 						Play
-					</div>
+					</div> */}
 					<video
 						autoPlay
 						loop
+						controls
 						muted
-						className="absolute z-10 w-auto min-w-full min-h-full max-w-none"
+						className=" z-10 w-auto min-w-full min-h-full max-w-none rounded-xl"
 					>
 						<source
 							src="https://res.cloudinary.com/dgisuffs0/video/upload/q_auto/v1646976061/LiquidHackGroupVideo_jsdi2b.mp4"
@@ -131,7 +132,7 @@ const Section = () => {
 						/>
 						Your browser does not support the video tag.
 					</video>
-				</header>
+				</div>
 			</div>
 			<div className="bg-black-600 bg-local bg-cover bg-no-repeat min-h-screen">
 				<div className="md:flex pt-32 items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
