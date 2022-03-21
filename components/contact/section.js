@@ -96,8 +96,8 @@ const Section = () => {
 								</span>
 								<textarea className="w-full h-32 bg-gray-300 text-black-600 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
 							</div>
-							<div class="mt-8">
-								<button class="uppercase text-sm font-bold tracking-wide bg-red-600 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
+							<div className="mt-8">
+								<button className="uppercase text-sm font-bold tracking-wide bg-red-600 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
 									Send Message
 								</button>
 							</div>
