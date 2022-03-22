@@ -1,8 +1,36 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
+import { gsap } from 'gsap';
 import Button from './button';
 
+const Letter = ({ space, letter }) => {
+	return space == true ? (
+		<div className="text">&nbsp;&nbsp;</div>
+	) : (
+		<h1 className="text text-white md:pb-5 text-3xl md:text-5xl font-bold">
+			{letter}
+		</h1>
+	);
+};
+
+const style = {
+	words: {
+		display: 'flex',
+		// flexDirection: 'row',
+		overflow: 'hidden',
+	},
+};
+
 const Section = () => {
+	useEffect(() => {
+		let textAnimation = gsap.timeline();
+		textAnimation.from('.text', {
+			y: 400,
+			stagger: {
+				each: 0.07,
+			},
+		});
+	}, []);
 	return (
 		<>
 			<div className="bg-black-600 mt-28 min-h-min">
@@ -18,9 +46,31 @@ const Section = () => {
 						</div>
 						<div className="flex justify-center md:w-8/12 w-full px-3">
 							<div className="md:w-8/12 w-full">
-								<h1 className="text-white pt-8 text-3xl md:text-5xl font-bold">
+								{/* <h1 className="text-white pt-8 text-3xl md:text-5xl font-bold">
 									Build Your Custom Software
-								</h1>
+								</h1> */}
+								<div style={style.words}>
+									{'Build Your Custom'
+										.split('')
+										.map((i) =>
+											i == ' ' ? (
+												<Letter space={true} letter={i} />
+											) : (
+												<Letter space={false} letter={i} />
+											)
+										)}
+								</div>
+								<div style={style.words}>
+									{'Software'
+										.split('')
+										.map((i) =>
+											i == ' ' ? (
+												<Letter space={true} letter={i} />
+											) : (
+												<Letter space={false} letter={i} />
+											)
+										)}
+								</div>
 								<p className="mt-3 text-white text-base md:text-lg">
 									With the fast-changing world, the needs of the people are
 									changing. Businesses need to upgrade themselves with the
@@ -45,9 +95,31 @@ const Section = () => {
 					<div className="md:flex items-center w-full">
 						<div className="flex justify-start mb-8 md:mb-0 md:w-7/12 w-full ">
 							<div className="md:w-8/12 w-full">
-								<h1 className="text-white pt-8 text-3xl md:text-5xl font-bold">
+								{/* <h1 className="text-white pt-8 text-3xl md:text-5xl font-bold">
 									Web Design and Brand Identity
-								</h1>
+								</h1> */}
+								<div style={style.words}>
+									{'Web Design and'
+										.split('')
+										.map((i) =>
+											i == ' ' ? (
+												<Letter space={true} letter={i} />
+											) : (
+												<Letter space={false} letter={i} />
+											)
+										)}
+								</div>
+								<div style={style.words}>
+									{'Brand Identity'
+										.split('')
+										.map((i) =>
+											i == ' ' ? (
+												<Letter space={true} letter={i} />
+											) : (
+												<Letter space={false} letter={i} />
+											)
+										)}
+								</div>
 								<p className="mt-3 text-white text-base md:text-lg">
 									Our focus is mainly on design, usability, creativity and
 									content site management. Site’s appearance and functionality.
@@ -104,19 +176,19 @@ const Section = () => {
 					{/* <div className="relative z-30 p-5 text-2xl text-white bg-white bg-opacity-50 rounded-xl">
 						Play
 					</div> */}
-					<video
+					{/* <video
 						autoPlay
 						loop
 						controls
 						muted
-						className=" z-10 w-auto min-w-fit max-h-96 max-w-none rounded-xl"
+						className="z-10 w-auto md:min-w-fit max-h-96 max-w-fit rounded-xl"
 					>
 						<source
 							src="https://res.cloudinary.com/dgisuffs0/video/upload/q_auto/v1646976061/LiquidHackGroupVideo_jsdi2b.mp4"
 							type="video/mp4"
 						/>
 						Your browser does not support the video tag.
-					</video>
+					</video> */}
 				</div>
 			</div>
 			<div className="bg-black-600 bg-local bg-cover bg-no-repeat min-h-min">
