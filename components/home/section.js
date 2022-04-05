@@ -1,7 +1,15 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import Image from 'next/image';
+import Typewriter from 'typewriter-effect';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { gsap } from 'gsap';
 import Button from './button';
+import ProjectSection from './projects';
+import SkillsSection from '../SkillsSection/index';
+import GithubRepo from '../GithubRepo/index';
+import Title from '../title/index';
+import Slider from '../logoSlider';
+import 'animate.css/animate.min.css';
 
 const Letter = ({ space, letter }) => {
 	return space == true ? (
@@ -22,6 +30,8 @@ const style = {
 };
 
 const Section = () => {
+	const [toggle, setToggle] = useState(false);
+
 	useEffect(() => {
 		let textAnimation = gsap.timeline();
 		textAnimation.from('.text', {
@@ -31,6 +41,10 @@ const Section = () => {
 			},
 		});
 	}, []);
+
+	const handleToggle = () => {
+		setToggle(!toggle);
+	};
 	return (
 		<>
 			<div className="bg-black-600 mt-28 min-h-min">
@@ -46,43 +60,82 @@ const Section = () => {
 						</div>
 						<div className="flex justify-center md:w-8/12 w-full px-3">
 							<div className="md:w-8/12 w-full">
-								{/* <h1 className="text-white pt-8 text-3xl md:text-5xl font-bold">
+								<AnimationOnScroll
+									initiallyVisible={false}
+									animateIn="animate__fadeInRightBig"
+								>
+									{/* <h1 className="text-white pt-8 text-3xl md:text-5xl font-bold">
 									Build Your Custom Software
 								</h1> */}
-								<div style={style.words}>
-									{'Build Your Custom'
-										.split('')
-										.map((i) =>
+									<div style={style.words}>
+										{`Let's Build Your`.split('').map((i, index) =>
 											i == ' ' ? (
-												<Letter space={true} letter={i} />
+												<Fragment key={index}>
+													<Letter space={true} letter={i} />
+												</Fragment>
 											) : (
-												<Letter space={false} letter={i} />
+												<Fragment key={index}>
+													<Letter key={index} space={false} letter={i} />
+												</Fragment>
 											)
 										)}
-								</div>
-								<div style={style.words}>
-									{'Software'
-										.split('')
-										.map((i) =>
+									</div>
+									<div style={style.words}>
+										{'Custom Software'.split('').map((i, index) =>
 											i == ' ' ? (
-												<Letter space={true} letter={i} />
+												<Fragment key={index}>
+													<Letter space={true} letter={i} />
+												</Fragment>
 											) : (
-												<Letter space={false} letter={i} />
+												<Fragment key={index}>
+													<Letter key={index} space={false} letter={i} />
+												</Fragment>
 											)
 										)}
-								</div>
-								<p className="mt-3 text-white text-base md:text-lg">
-									With the fast-changing world, the needs of the people are
-									changing. Businesses need to upgrade themselves with the
-									changing needs and requirements of the people to stay relevant
-									in this dynamic market.
-								</p>
-								<Button>Get Started</Button>
+									</div>
+									<p className="mt-3 text-white text-base md:text-lg">
+										<Typewriter
+											options={{
+												strings: [
+													`The business world is fast and rapidly evolving in
+												technology applications. `,
+												],
+												autoStart: true,
+												loop: true,
+											}}
+										/>
+										{/* Every day businesses find the need
+												to upgrade with the changing customer needs to remain
+												relevant in this dynamic market. */}
+									</p>
+									<Button onClick={handleToggle}>Code with Us</Button>
+								</AnimationOnScroll>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			{toggle && (
+				<div className="bg-black-600 mt-16 md:min-h-min">
+					<AnimationOnScroll animateIn="animate__tada">
+						<div className="relative flex items-center justify-center py-4 px-7 mb-12 md:h-min">
+							<video
+								autoPlay
+								loop
+								controls
+								muted
+								className="z-10 md:min-w-fit w-60 max-h-96 sm:max-w-fit rounded-xl"
+							>
+								<source
+									src="https://cloudinary-res.cloudinary.com/video/upload/f_auto:video,q_auto/v1601900814/website/refresh/dx/Developer_Experience_hero_v2.mp4"
+									type="video/mp4"
+								/>
+								Your browser does not support the video tag.
+							</video>
+						</div>
+					</AnimationOnScroll>
+				</div>
+			)}
 			<div
 				className="bg-black-600 bg-local bg-cover bg-no-repeat min-h-min"
 				style={{
@@ -94,40 +147,51 @@ const Section = () => {
 				<div className="md:flex pt-32 items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
 					<div className="md:flex items-center w-full">
 						<div className="flex justify-start mb-8 md:mb-0 md:w-7/12 w-full ">
-							<div className="md:w-8/12 w-full">
-								{/* <h1 className="text-white pt-8 text-3xl md:text-5xl font-bold">
-									Web Design and Brand Identity
-								</h1> */}
-								<div style={style.words}>
-									{'Web Design and'
-										.split('')
-										.map((i) =>
+							<AnimationOnScroll
+								initiallyVisible={false}
+								animateIn="animate__fadeInLeftBig"
+							>
+								<div className="md:w-8/12 w-full">
+									{/* <h1 className="text-white pt-8 text-3xl md:text-5xl font-bold">
+										Web Design and Brand Identity
+									</h1> */}
+
+									<div style={style.words}>
+										{'Web Design and'.split('').map((i, index) =>
 											i == ' ' ? (
-												<Letter space={true} letter={i} />
+												<Fragment key={index}>
+													<Letter space={true} letter={i} />
+												</Fragment>
 											) : (
-												<Letter space={false} letter={i} />
+												<Fragment key={index}>
+													<Letter space={false} letter={i} />
+												</Fragment>
 											)
 										)}
-								</div>
-								<div style={style.words}>
-									{'Brand Identity'
-										.split('')
-										.map((i) =>
+									</div>
+									<div style={style.words}>
+										{'Brand Identity'.split('').map((i, index) =>
 											i == ' ' ? (
-												<Letter space={true} letter={i} />
+												<Fragment key={index}>
+													<Letter space={true} letter={i} />
+												</Fragment>
 											) : (
-												<Letter space={false} letter={i} />
+												<Fragment key={index}>
+													<Letter space={false} letter={i} />
+												</Fragment>
 											)
 										)}
+									</div>
+									<p className="mt-3 text-white text-base md:text-lg">
+										Our focus is mainly on design, usability, creativity and
+										content site management.
+									</p>
+									{/* <p>Site’s appearance and
+										functionality. Integrating these elements will maximize the
+										site’s overall usability and performance.</p> */}
+									<Button>Learn More</Button>
 								</div>
-								<p className="mt-3 text-white text-base md:text-lg">
-									Our focus is mainly on design, usability, creativity and
-									content site management. Site’s appearance and functionality.
-									Integrating these elements will maximize the site’s overall
-									usability and performance.
-								</p>
-								<Button>Learn More</Button>
-							</div>
+							</AnimationOnScroll>
 						</div>
 						<div className="md:w-6/12 w-full">
 							<Image
@@ -152,25 +216,36 @@ const Section = () => {
 							/>
 						</div>
 						<div className="flex justify-center md:w-7/12 w-full px-3">
-							<div className="md:w-10/12 w-full">
-								<h1 className="text-white pt-8 text-3xl md:text-5xl font-bold">
-									Website, App and Desktop Development
-								</h1>
-								<p className="mt-3 text-white text-base md:text-lg">
-									At Liquid Hack Group, our main focus is on developing software
-									applications focused on business intelligence and the
-									real-time analysis of data as it streams into the
-									organization. Just like we do with custom software development
-									tailored for your business, we develop business intelligence
-									software to help your company gain more insights based on its
-									daily generated data.
-								</p>
-								<Button>Learn More</Button>
-							</div>
+							<AnimationOnScroll
+								initiallyVisible={false}
+								animateIn="animate__fadeInRightBig"
+							>
+								<div className="md:w-10/12 w-full">
+									<h1 className="text-white pt-8 text-3xl md:text-5xl font-bold">
+										Website & Mobile App Design
+									</h1>
+									<p className="mt-3 text-white text-base md:text-lg">
+										A well-designed Web and Mobile App plays a significant role
+										in brand identity and overall business growth.
+									</p>
+
+									{/* <p className="mt-3 text-white text-base md:text-lg">
+										At Liquid Hack Group, our main focus is on developing
+										software applications focused on business intelligence and
+										the real-time analysis of data as it streams into the
+										organization. Just like we do with custom software
+										development tailored for your business, we develop business
+										intelligence software to help your company gain more
+										insights based on its daily generated data.
+									</p> */}
+									<Button>Learn More</Button>
+								</div>
+							</AnimationOnScroll>
 						</div>
 					</div>
 				</div>
 			</div>
+
 			<div className="bg-black-600 mt-16 md:min-h-min">
 				<div className="relative flex items-center justify-center py-4 px-7 mb-12 md:h-min">
 					{/* <div className="relative z-30 p-5 text-2xl text-white bg-white bg-opacity-50 rounded-xl">
@@ -192,6 +267,37 @@ const Section = () => {
 				</div>
 			</div>
 			<div className="bg-black-600 bg-local bg-cover bg-no-repeat min-h-min">
+				<div className="md:flex pt-32 items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
+					<div className="md:flex items-center w-full">
+						<div className="flex justify-start mb-8 md:mb-0 md:w-7/12 w-full ">
+							<AnimationOnScroll
+								initiallyVisible={false}
+								animateIn="animate__fadeInLeftBig"
+							>
+								<div className="md:w-8/12 w-full">
+									<h1 className="text-white pt-8 text-3xl md:text-5xl font-bold">
+										Web & Mobile App Development
+									</h1>
+									<p className="mt-3 text-white text-base md:text-lg">
+										Customized Web and Mobile App solutions are more efficient,
+										flexible, and scalable for your needs and growth.
+									</p>
+									<Button>Learn More</Button>
+								</div>
+							</AnimationOnScroll>
+						</div>
+						<div className="md:w-6/12 w-full">
+							<Image
+								src="https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1644582843/webDesign1_bdqkik.png"
+								width={710}
+								height={450}
+								alt="liquidhack web and application design"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+			{/* <div className="bg-black-600 bg-local bg-cover bg-no-repeat min-h-min">
 				<div className="md:flex pt-32 items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
 					<div className="md:flex items-center w-full">
 						<div className="flex justify-start mb-8 md:mb-0 md:w-7/12 w-full ">
@@ -221,8 +327,8 @@ const Section = () => {
 						</div>
 					</div>
 				</div>
-			</div>
-			<div className="bg-black-600 mt-16 min-h-min">
+			</div> */}
+			{/* <div className="bg-black-600 mt-16 min-h-min">
 				<div className="md:flex items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
 					<div className="md:flex items-center w-full">
 						<div className="md:flex justify-start md:w-6/12 w-full">
@@ -248,8 +354,8 @@ const Section = () => {
 						</div>
 					</div>
 				</div>
-			</div>
-			<div className="bg-black-600 bg-local bg-cover bg-no-repeat min-h-min">
+			</div> */}
+			{/* <div className="bg-black-600 bg-local bg-cover bg-no-repeat min-h-min">
 				<div className="md:flex pt-32 items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
 					<div className="md:flex items-center w-full">
 						<div className="flex justify-start mb-8 md:mb-0 md:w-7/12 w-full ">
@@ -276,7 +382,20 @@ const Section = () => {
 						</div>
 					</div>
 				</div>
+			</div> */}
+			<div className=" items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
+				<Title title="Projects Section" text="SELECTED PROJECTS" />
+				<ProjectSection />
 			</div>
+			<div className=" items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
+				<Title title="Projects Section" text="PHOTOGRAPHY & LOGOs" />
+				<SkillsSection />
+			</div>
+			<div className=" items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
+				<Title title="Open Source Exercices" text="github Repositories" />
+				<GithubRepo />
+			</div>
+			<Slider />
 		</>
 	);
 };

@@ -7,7 +7,7 @@ const Navbar = () => {
 	const [open, setOpen] = useState(false);
 	return (
 		<div className="shadow-md w-screen fixed z-40 top-0 left-0 bg-black-600">
-			<div className="md:flex items-center max-w-7xl mr-auto ml-auto justify-between  py-4 px-7 md:px-10">
+			<div className="md:flex items-center max-w-7xl mr-auto ml-auto justify-between py-4 px-7 md:px-10">
 				<div className="cursor-pointer flex items-center">
 					<Image
 						src="https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/c_scale,h_52,w_140/v1641167608/LiquidHack_1_aoh2xd.png"
