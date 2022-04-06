@@ -1,0 +1,107 @@
+@import url('https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700&display=swap');
+
+.capabilities {
+	width: min(60rem, 90%);
+	margin-inline: auto;
+
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	gap: 2rem;
+
+	list-style: none;
+	counter-reset: stepnr;
+}
+
+.li:nth-child(6n + 1) {
+	--accent-color: #b8df4e;
+}
+.li:nth-child(6n + 2) {
+	--accent-color: #4cbccb;
+}
+.li:nth-child(6n + 3) {
+	--accent-color: #7197d3;
+}
+.li:nth-child(6n + 4) {
+	--accent-color: #ae78cb;
+}
+.li:nth-child(6n + 5) {
+	--accent-color: #7dc7a4;
+}
+.li:nth-child(6n + 6) {
+	--accent-color: #f078c2;
+}
+
+.capabilities .li {
+	/* counter-increment: stepnr; */
+	position: relative;
+	width: 10rem;
+	aspect-ratio: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	border: 15px solid #e3e3e3;
+	border-radius: 50%;
+	box-shadow: 0 0 15px 5px #ffffff;
+	transition: 0.3s;
+	background: white;
+}
+.capabilities .li:hover {
+	background: white;
+}
+
+.capabilities .li::before,
+.capabilities .li::after {
+	inset: 0;
+	position: absolute;
+	border-radius: 50%;
+	border: var(--borderS) solid var(--bgColor);
+	line-height: 1.1;
+}
+/* .capabilities .li::before {
+	content: counter(stepnr);
+	color: var(--accent-color);
+	padding-top: 6rem;
+	padding-left: 2.5rem;
+	font-size: 5rem;
+	font-weight: 700;
+} */
+.rating {
+	position: absolute;
+	padding-top: 13rem;
+	color: var(--accent-color);
+	padding-left: 1rem;
+	font-size: 3rem;
+	font-weight: 700;
+}
+.capabilities .li::after {
+	content: '';
+}
+
+/* .capabilities .li > * {
+	width: 7.5rem;
+} */
+.capabilities .li .icon {
+	font-size: 1.5rem;
+	color: var(--accent-color);
+	text-align: center;
+}
+.capabilities .li .title {
+	font-size: 1rem;
+	font-weight: 500;
+}
+.capabilities .li .descr {
+	font-size: 0.8rem;
+	font-weight: 300;
+}
+/*
+.credits {
+	margin-top: 2rem;
+	text-align: right;
+}
+.credits a {
+	color: var(--color);
+} */

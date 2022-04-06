@@ -29,7 +29,7 @@ const Footer = () => {
 					</ul>
 				</div>
 				<div className="w-64">
-					<h1 className="text-white py-2">Solutions</h1>
+					<h1 className="text-white py-2">Services</h1>
 					<ul className="mt-3">
 						{solutions_links.map((link, index) => (
 							<li key={index} className="my-1">

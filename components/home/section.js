@@ -49,7 +49,7 @@ const Section = () => {
 		<>
 			<div className="bg-black-600 mt-28 min-h-min">
 				<div className="md:flex items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
-					<div className="md:flex items-center w-full">
+					<div className="flex flex-col-reverse md:flex-row items-center w-full">
 						<div className="md:w-5/12 w-full">
 							<Image
 								src="https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/c_scale,h_716,w_705/v1644582842/Landing2_hqfqax.png"
@@ -58,7 +58,7 @@ const Section = () => {
 								height={716}
 							/>
 						</div>
-						<div className="flex justify-center md:w-8/12 w-full px-3">
+						<div className="flex justify-center mb-8 md:mb-0 md:w-8/12 w-full px-3">
 							<div className="md:w-8/12 w-full">
 								<AnimationOnScroll
 									initiallyVisible={false}
@@ -238,7 +238,7 @@ const Section = () => {
 										intelligence software to help your company gain more
 										insights based on its daily generated data.
 									</p> */}
-									<Button>Learn More</Button>
+									<Button>Discover More</Button>
 								</div>
 							</AnimationOnScroll>
 						</div>
@@ -246,12 +246,12 @@ const Section = () => {
 				</div>
 			</div>
 
-			<div className="bg-black-600 mt-16 md:min-h-min">
+			{/* <div className="bg-black-600 mt-16 md:min-h-min">
 				<div className="relative flex items-center justify-center py-4 px-7 mb-12 md:h-min">
-					{/* <div className="relative z-30 p-5 text-2xl text-white bg-white bg-opacity-50 rounded-xl">
+					<div className="relative z-30 p-5 text-2xl text-white bg-white bg-opacity-50 rounded-xl">
 						Play
-					</div> */}
-					{/* <video
+					</div>
+					<video
 						autoPlay
 						loop
 						controls
@@ -263,9 +263,9 @@ const Section = () => {
 							type="video/mp4"
 						/>
 						Your browser does not support the video tag.
-					</video> */}
+					</video>
 				</div>
-			</div>
+			</div> */}
 			<div className="bg-black-600 bg-local bg-cover bg-no-repeat min-h-min">
 				<div className="md:flex pt-32 items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
 					<div className="md:flex items-center w-full">

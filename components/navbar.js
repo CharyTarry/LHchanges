@@ -43,7 +43,7 @@ const Navbar = () => {
 							</Link>
 						</li>
 					))}
-					<Button>Get Started</Button>
+					{/* <Button>Get Started</Button> */}
 				</ul>
 			</div>
 		</div>

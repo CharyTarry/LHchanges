@@ -43,6 +43,7 @@ const Home = () => {
 			>
 				<p className="back-to-top__image">↑</p>
 			</motion.a>
+			{/* <AnimatedCursor /> */}
 		</Layout>
 	);
 };
