@@ -3,7 +3,6 @@ import styles from '../styles/textSlider.module.scss';
 
 const textSlider = (props) => {
 	const { values } = props;
-	console.log(values);
 
 	return (
 		<div className={styles.slider}>

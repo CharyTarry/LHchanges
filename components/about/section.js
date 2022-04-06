@@ -84,7 +84,7 @@ const Section = () => {
 					<ol className={styles.capabilities}>
 						<li className={styles.li}>
 							<div className={styles.icon}>
-								<i class="fa-solid fa-bicycle"></i>
+								<i className="fa-solid fa-bicycle"></i>
 							</div>
 							<div className={styles.title}>Usability</div>
 							<p className={styles.rating}>
@@ -100,7 +100,7 @@ const Section = () => {
 						</li>
 						<li className={styles.li}>
 							<div className={styles.icon}>
-								<i class="fa-solid fa-car"></i>
+								<i className="fa-solid fa-car"></i>
 							</div>
 							<div className={styles.title}>Design</div>
 							<p className={styles.rating}>
@@ -116,7 +116,7 @@ const Section = () => {
 						</li>
 						<li className={styles.li}>
 							<div className={styles.icon}>
-								<i class="fa-solid fa-helicopter"></i>
+								<i className="fa-solid fa-helicopter"></i>
 							</div>
 							<div className={styles.title}>Creativity</div>
 							<p className={styles.rating}>
@@ -132,7 +132,7 @@ const Section = () => {
 						</li>
 						<li className={styles.li}>
 							<div className={styles.icon}>
-								<i class="fa-solid fa-plane"></i>
+								<i className="fa-solid fa-plane"></i>
 							</div>
 							<div className={styles.title}>Capacity</div>
 							<p className={styles.rating}>
@@ -148,7 +148,7 @@ const Section = () => {
 						</li>
 						<li className={styles.li}>
 							<div className={styles.icon}>
-								<i class="fa-solid fa-rocket"></i>
+								<i className="fa-solid fa-rocket"></i>
 							</div>
 							<div className={styles.title}>Research</div>
 							<p className={styles.rating}>
