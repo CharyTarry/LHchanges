@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
 // import AnimatedCursor from 'react-animated-cursor';
 import { AnimatePresence, motion } from 'framer-motion';
-import { Expo, Power3 } from 'gsap';
+import { Expo, Power3, gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { Layout, Section } from '../components';
 import ScrollToTop from '../utils/ScrollToTop';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
 	const [isRendered, setIsRendered] = useState(false);

@@ -58,23 +58,23 @@ const Section = () => {
 							</div>
 						</div>
 						<div className="md:w-6/12 w-full">
-							<AnimationOnScroll animateIn="animate__tada">
-								<div className="md:h-full pb-28">
-									<video
-										autoPlay
-										loop
-										controls
-										muted
-										className="w-full rounded-xl"
-									>
-										<source
-											src="https://res.cloudinary.com/dgisuffs0/video/upload/q_auto/v1646976061/LiquidHackGroupVideo_jsdi2b.mp4"
-											type="video/mp4"
-										/>
-										Your browser does not support the video tag.
-									</video>
-								</div>
-							</AnimationOnScroll>
+							{/* <AnimationOnScroll animateIn="animate__tada"> */}
+							<div className="md:h-full pb-28">
+								<video
+									autoPlay
+									loop
+									controls
+									muted
+									className="w-full rounded-xl"
+								>
+									<source
+										src="https://res.cloudinary.com/dgisuffs0/video/upload/q_auto/v1646976061/LiquidHackGroupVideo_jsdi2b.mp4"
+										type="video/mp4"
+									/>
+									Your browser does not support the video tag.
+								</video>
+							</div>
+							{/* </AnimationOnScroll> */}
 						</div>
 					</div>
 				</div>

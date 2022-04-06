@@ -93,7 +93,7 @@ const Section = () => {
 											)
 										)}
 									</div>
-									<p className="mt-3 text-white text-base md:text-lg">
+									<div className="mt-3 text-white text-base md:text-lg">
 										<Typewriter
 											options={{
 												strings: [
@@ -104,10 +104,10 @@ const Section = () => {
 												loop: true,
 											}}
 										/>
-										{/* Every day businesses find the need
-												to upgrade with the changing customer needs to remain
-												relevant in this dynamic market. */}
-									</p>
+										{/* Every day businesses find the need to upgrade with the
+									changing customer needs to remain relevant in this dynamic
+									market. */}
+									</div>
 									<Button onClick={handleToggle}>Code with Us</Button>
 								</AnimationOnScroll>
 							</div>
@@ -383,10 +383,10 @@ const Section = () => {
 					</div>
 				</div>
 			</div> */}
-			<div className=" items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
+			{/* <div className=" items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
 				<Title title="Projects Section" text="SELECTED PROJECTS" />
 				<ProjectSection />
-			</div>
+			</div> */}
 			<div className=" items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
 				<Title title="Projects Section" text="PHOTOGRAPHY & LOGOs" />
 				<SkillsSection />

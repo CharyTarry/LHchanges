@@ -1,18 +1,14 @@
-import React, { useRef, useEffect, useState } from 'react';
-import { TweenMax, Power3, gsap } from 'gsap';
+import React, { useRef, useEffect } from 'react';
+import { Power3, gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 import Link from 'next/link';
 
 import styles from '../../styles/skills.module.scss';
-// import coding from '../../assets/images/coding.jpg';
-// import logoDesign from '../../assets/images/brad-neathery-mGH253KbfaY-unsplash.jpg';
-// import photography from '../../assets/images/photography.jpg';
-// import typography from '../../assets/images/typographie.jpg';
 
 import { motion } from 'framer-motion';
 
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
-// gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 const transition = {
 	duration: 0.6,
