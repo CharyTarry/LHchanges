@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import Image from 'next/image';
+import { gsap } from 'gsap';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import CountUp from 'react-countup';
 import Title from '../title/index';
@@ -8,8 +9,46 @@ import Button from './button';
 import styles from '../../styles/about.module.css';
 import 'animate.css/animate.min.css';
 
+const capabilities = [
+	{
+		name: 'Usability',
+		icon: 'fa-solid fa-bicycle',
+		rating: 8.5,
+	},
+	{
+		name: 'Design',
+		icon: 'fa-solid fa-car',
+		rating: 8.7,
+	},
+	{
+		name: 'Creativity',
+		icon: 'fa-solid fa-helicopter',
+		rating: 8.5,
+	},
+	{
+		name: 'Capacity',
+		icon: 'fa-solid fa-plane',
+		rating: 8.2,
+	},
+	{
+		name: 'Research',
+		icon: 'fa-solid fa-rocket',
+		rating: 8.4,
+	},
+];
+
 const Section = () => {
 	const [toggle, setToggle] = useState(false);
+
+	useEffect(() => {
+		let textAnimation = gsap.timeline();
+		textAnimation.from('.circle', {
+			y: 400,
+			stagger: {
+				each: 0.07,
+			},
+		});
+	}, []);
 
 	const handleToggle = () => {
 		setToggle(!toggle);
@@ -45,7 +84,7 @@ const Section = () => {
 									concept that you envision achieving for you organization.
 								</p>
 								<p className="mt-5 mb-4 text-white">
-									With our curated tea, of technical experts we design, develop
+									With our curated team, of technical experts we design, develop
 									and deploy customized web and mobile app software solutions.
 								</p>
 								<p className="mt-5 mb-4 text-white">
@@ -57,9 +96,35 @@ const Section = () => {
 								<Button onClick={handleToggle}>Our Capabilities</Button>
 							</div>
 						</div>
+						{toggle && (
+							<div className="block sm:hidden bg-transparent sm:mt-8 py-8 min-h-min">
+								<ol className={styles.capabilities}>
+									{capabilities?.map((item, index) => (
+										<Fragment key={index}>
+											<li className={styles.li}>
+												<div className={styles.icon}>
+													<i className={item.icon}></i>
+												</div>
+												<div className={styles.title}>{item.name}</div>
+												<p className={styles.rating}>
+													<CountUp
+														start={0}
+														end={item.rating}
+														duration={2.75}
+														decimals={1}
+														decimal="."
+														separator=","
+													/>
+												</p>
+											</li>
+										</Fragment>
+									))}
+								</ol>
+							</div>
+						)}
 						<div className="md:w-6/12 w-full">
 							{/* <AnimationOnScroll animateIn="animate__tada"> */}
-							<div className="md:h-full pb-28">
+							<div className="md:h-full sm:pb-28">
 								<video
 									autoPlay
 									loop
@@ -80,93 +145,33 @@ const Section = () => {
 				</div>
 			</div>
 			{toggle && (
-				<div className="bg-black-600 mt-8 py-4 min-h-min">
+				<div className="hidden sm:block bg-black-600 sm:mt-8 sm:py-8 min-h-min">
 					<ol className={styles.capabilities}>
-						<li className={styles.li}>
-							<div className={styles.icon}>
-								<i className="fa-solid fa-bicycle"></i>
-							</div>
-							<div className={styles.title}>Usability</div>
-							<p className={styles.rating}>
-								<CountUp
-									start={0}
-									end={8.5}
-									duration={2.75}
-									decimals={1}
-									decimal="."
-									separator=","
-								/>
-							</p>
-						</li>
-						<li className={styles.li}>
-							<div className={styles.icon}>
-								<i className="fa-solid fa-car"></i>
-							</div>
-							<div className={styles.title}>Design</div>
-							<p className={styles.rating}>
-								<CountUp
-									start={0}
-									end={8.7}
-									duration={2.75}
-									decimals={1}
-									decimal="."
-									separator=","
-								/>
-							</p>
-						</li>
-						<li className={styles.li}>
-							<div className={styles.icon}>
-								<i className="fa-solid fa-helicopter"></i>
-							</div>
-							<div className={styles.title}>Creativity</div>
-							<p className={styles.rating}>
-								<CountUp
-									start={0}
-									end={8.5}
-									duration={2.75}
-									decimals={1}
-									decimal="."
-									separator=","
-								/>
-							</p>
-						</li>
-						<li className={styles.li}>
-							<div className={styles.icon}>
-								<i className="fa-solid fa-plane"></i>
-							</div>
-							<div className={styles.title}>Capacity</div>
-							<p className={styles.rating}>
-								<CountUp
-									start={0}
-									end={8.2}
-									duration={2.75}
-									decimals={1}
-									decimal="."
-									separator=","
-								/>
-							</p>
-						</li>
-						<li className={styles.li}>
-							<div className={styles.icon}>
-								<i className="fa-solid fa-rocket"></i>
-							</div>
-							<div className={styles.title}>Research</div>
-							<p className={styles.rating}>
-								<CountUp
-									start={0}
-									end={8.4}
-									duration={2.75}
-									decimals={1}
-									decimal="."
-									separator=","
-								/>
-							</p>
-						</li>
+						{capabilities?.map((item, index) => (
+							<Fragment key={index}>
+								<li className={styles.li}>
+									<div className={styles.icon}>
+										<i className={item.icon}></i>
+									</div>
+									<div className={styles.title}>{item.name}</div>
+									<p className={styles.rating}>
+										<CountUp
+											start={0}
+											end={item.rating}
+											duration={2.75}
+											decimals={1}
+											decimal="."
+											separator=","
+										/>
+									</p>
+								</li>
+							</Fragment>
+						))}
 					</ol>
 				</div>
 			)}
 			<div
-				className="bg-black-600 mt-8 bg-opacity-5 bg-local bg-cover bg-no-repeat bg-center min-h-screen"
+				className="bg-black-600 mt-8 bg-blend-luminosity bg-local bg-cover bg-no-repeat bg-center min-h-screen"
 				style={{
 					backgroundImage: `url(
 						'https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1644582842/75891_Converted_tbny5o.png'
@@ -174,7 +179,7 @@ const Section = () => {
 					backgroundPositionY: 10,
 				}}
 			>
-				<div className="md:flex items-center md:max-w-7xl md:mx-auto py-4 px-7 md:px-10">
+				<div className="md:flex items-center md:max-w-7xl md:mx-auto sm:py-4 px-7 md:px-10">
 					<div className="md:flex items-center w-full">
 						<div className="flex items-center justify-start md:w-6/12 w-full">
 							<div className="md:w-9/12 w-full">
@@ -188,7 +193,7 @@ const Section = () => {
 							</div>
 						</div>
 						<div className="md:w-6/12 w-full">
-							<div className="mt-16 md:mt-0">
+							<div className="sm:mt-16 md:mt-0">
 								<h1 className="text-red-600 text-6xl font-semibold">01</h1>
 								<h1 className="mt-8 text-white text-4xl">Usability</h1>
 								<p className="mt-8 text-white">
@@ -233,7 +238,7 @@ const Section = () => {
 					backgroundPositionY: -40,
 				}}
 			>
-				<div className="md:flex items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
+				<div className="md:flex items-center md:max-w-7xl md:mr-auto md:ml-auto sm:py-4 px-7 md:px-10">
 					<div className="md:flex items-center w-full">
 						<div className="md:w-6/12 w-full">
 							<div>

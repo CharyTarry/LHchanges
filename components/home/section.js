@@ -9,6 +9,7 @@ import SkillsSection from '../SkillsSection/index';
 import GithubRepo from '../GithubRepo/index';
 import Title from '../title/index';
 import Slider from '../logoSlider';
+import styles from '../../styles/home.module.css';
 import 'animate.css/animate.min.css';
 
 const Letter = ({ space, letter }) => {
@@ -47,6 +48,13 @@ const Section = () => {
 	};
 	return (
 		<>
+			<div className={styles.cursor}>
+				<div className={styles.cursor_small}></div>
+				<div className={styles.cursor_large}></div>
+				<div className={styles.cursor_text}>
+					<div className={styles.text}>GO HERE! GO HERE! GO HERE! GO HERE!</div>
+				</div>
+			</div>
 			<div className="bg-black-600 mt-28 min-h-min">
 				<div className="md:flex items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
 					<div className="flex flex-col-reverse md:flex-row items-center w-full">
