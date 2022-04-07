@@ -81,7 +81,7 @@ function SkillsSection() {
 				<div className={styles.container}>
 					{data.map((data, id) => (
 						<div key={id} className={styles.wrapper} ref={addToRefs}>
-							<Link href={data.name} passHref>
+							<Link href="/" passHref>
 								<motion.div
 									transition={transition}
 									whileHover={{
@@ -100,8 +100,8 @@ function SkillsSection() {
 										className={styles.projectInfo}
 									>
 										<h4>{data.title}</h4>
-										<a className={styles.projectLink} href="#about">
-											See more
+										<a className={styles.projectLink} href="#">
+											Get Quote
 										</a>
 									</motion.div>
 

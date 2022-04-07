@@ -13,13 +13,13 @@ $phone: 480px;
 		.container {
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
-			grid-gap: 50px 50px;
-			margin: 5rem 0 5rem 0;
+			// grid-gap: 15px 15px;
+			margin: 3rem 0 0 0;
 			justify-content: center;
 
 			@media (max-width: $laptop) {
 				grid-template-columns: repeat(2, 1fr);
-				grid-gap: 70px 50px;
+				// grid-gap: 70px 50px;
 			}
 			@media (max-width: $tablet) {
 				grid-template-columns: repeat(1, 1fr);
@@ -27,7 +27,7 @@ $phone: 480px;
 
 			@media (max-width: $phone) {
 				grid-template-columns: repeat(1, 1fr);
-				grid-gap: 50px;
+				// grid-gap: 50px;
 			}
 
 			.wrapper {

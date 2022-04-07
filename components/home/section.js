@@ -16,7 +16,7 @@ const Letter = ({ space, letter }) => {
 	return space == true ? (
 		<div className="text">&nbsp;&nbsp;</div>
 	) : (
-		<h1 className="text text-white md:pb-5 text-3xl md:text-5xl font-bold">
+		<h1 className="text text-white md:pb-5 text-2xl md:text-5xl font-bold">
 			{letter}
 		</h1>
 	);
@@ -25,6 +25,7 @@ const Letter = ({ space, letter }) => {
 const style = {
 	words: {
 		display: 'flex',
+		flexWrap: 'wrap',
 		// flexDirection: 'row',
 		overflow: 'hidden',
 	},
@@ -66,7 +67,28 @@ const Section = () => {
 								height={716}
 							/>
 						</div>
-						<div className="flex justify-center mb-8 md:mb-0 md:w-8/12 w-full px-3">
+						{toggle && (
+							<div className="block sm:hidden bg-transparent mt-16 md:min-h-min">
+								<AnimationOnScroll animateIn="animate__tada">
+									<div className="flex items-center justify-center py-4 px-7 mb-12 md:h-min">
+										<video
+											autoPlay
+											loop
+											controls
+											muted
+											className="z-10 max-h-96 sm:max-w-fit rounded-xl"
+										>
+											<source
+												src="https://cloudinary-res.cloudinary.com/video/upload/f_auto:video,q_auto/v1601900814/website/refresh/dx/Developer_Experience_hero_v2.mp4"
+												type="video/mp4"
+											/>
+											Your browser does not support the video tag.
+										</video>
+									</div>
+								</AnimationOnScroll>
+							</div>
+						)}
+						<div className="flex justify-center mb-10 md:mb-0 md:w-8/12 w-full px-3">
 							<div className="md:w-8/12 w-full">
 								<AnimationOnScroll
 									initiallyVisible={false}
@@ -124,15 +146,15 @@ const Section = () => {
 				</div>
 			</div>
 			{toggle && (
-				<div className="bg-black-600 mt-16 md:min-h-min">
+				<div className="hidden sm:block bg-transparent sm:mt-4 md:min-h-min">
 					<AnimationOnScroll animateIn="animate__tada">
-						<div className="relative flex items-center justify-center py-4 px-7 mb-12 md:h-min">
+						<div className="flex items-center justify-center py-4 px-7 mb-12 md:h-min">
 							<video
 								autoPlay
 								loop
 								controls
 								muted
-								className="z-10 md:min-w-fit w-60 max-h-96 sm:max-w-fit rounded-xl"
+								className="z-10 max-h-96 sm:max-w-fit rounded-xl"
 							>
 								<source
 									src="https://cloudinary-res.cloudinary.com/video/upload/f_auto:video,q_auto/v1601900814/website/refresh/dx/Developer_Experience_hero_v2.mp4"
@@ -152,14 +174,14 @@ const Section = () => {
 					)`,
 				}}
 			>
-				<div className="md:flex pt-32 items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
+				<div className="md:flex sm:pt-32 items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
 					<div className="md:flex items-center w-full">
 						<div className="flex justify-start mb-8 md:mb-0 md:w-7/12 w-full ">
 							<AnimationOnScroll
 								initiallyVisible={false}
 								animateIn="animate__fadeInLeftBig"
 							>
-								<div className="md:w-8/12 w-full">
+								<div className="md:w-8/12 mb-8 sm:mb-0 w-full">
 									{/* <h1 className="text-white pt-8 text-3xl md:text-5xl font-bold">
 										Web Design and Brand Identity
 									</h1> */}
@@ -212,9 +234,16 @@ const Section = () => {
 					</div>
 				</div>
 			</div>
-			<div className="bg-black-600 mt-16 min-h-min">
+			<div
+				className="relative bg-black-600 sm:mt-16 bg-local bg-cover bg-no-repeat min-h-min web-design"
+				// style={{
+				// 	backgroundImage: `url(
+				// 		'https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1644582842/90631_ex8fml.png'
+				// 	)`,
+				// }}
+			>
 				<div className="md:flex items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
-					<div className="md:flex items-center w-full">
+					<div className="flex flex-col-reverse md:flex-row items-center w-full">
 						<div className="md:flex justify-start md:w-6/12 w-full">
 							<Image
 								src="https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1644582843/Website2_yr66gy.png"
@@ -223,15 +252,41 @@ const Section = () => {
 								alt="liquidhack web and application development"
 							/>
 						</div>
-						<div className="flex justify-center md:w-7/12 w-full px-3">
+						<div className="flex justify-center mb-8 sm:mb-0 md:w-7/12 w-full px-3">
 							<AnimationOnScroll
 								initiallyVisible={false}
 								animateIn="animate__fadeInRightBig"
 							>
 								<div className="md:w-10/12 w-full">
-									<h1 className="text-white pt-8 text-3xl md:text-5xl font-bold">
+									{/* <h1 className="text-white pt-8 text-3xl md:text-5xl font-bold">
 										Website & Mobile App Design
-									</h1>
+									</h1> */}
+									<div style={style.words}>
+										{'Website & Mobile'.split('').map((i, index) =>
+											i == ' ' ? (
+												<Fragment key={index}>
+													<Letter space={true} letter={i} />
+												</Fragment>
+											) : (
+												<Fragment key={index}>
+													<Letter space={false} letter={i} />
+												</Fragment>
+											)
+										)}
+									</div>
+									<div style={style.words}>
+										{'App Design'.split('').map((i, index) =>
+											i == ' ' ? (
+												<Fragment key={index}>
+													<Letter space={true} letter={i} />
+												</Fragment>
+											) : (
+												<Fragment key={index}>
+													<Letter space={false} letter={i} />
+												</Fragment>
+											)
+										)}
+									</div>
 									<p className="mt-3 text-white text-base md:text-lg">
 										A well-designed Web and Mobile App plays a significant role
 										in brand identity and overall business growth.
@@ -275,17 +330,43 @@ const Section = () => {
 				</div>
 			</div> */}
 			<div className="bg-black-600 bg-local bg-cover bg-no-repeat min-h-min">
-				<div className="md:flex pt-32 items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
+				<div className="md:flex sm:pt-32 items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
 					<div className="md:flex items-center w-full">
 						<div className="flex justify-start mb-8 md:mb-0 md:w-7/12 w-full ">
 							<AnimationOnScroll
 								initiallyVisible={false}
 								animateIn="animate__fadeInLeftBig"
 							>
-								<div className="md:w-8/12 w-full">
-									<h1 className="text-white pt-8 text-3xl md:text-5xl font-bold">
+								<div className="md:w-8/12 mb-8 sm:mb-0 w-full">
+									{/* <h1 className="text-white pt-8 text-3xl md:text-5xl font-bold">
 										Web & Mobile App Development
-									</h1>
+									</h1> */}
+									<div style={style.words}>
+										{'Website & Mobile'.split('').map((i, index) =>
+											i == ' ' ? (
+												<Fragment key={index}>
+													<Letter space={true} letter={i} />
+												</Fragment>
+											) : (
+												<Fragment key={index}>
+													<Letter space={false} letter={i} />
+												</Fragment>
+											)
+										)}
+									</div>
+									<div style={style.words}>
+										{'App Development'.split('').map((i, index) =>
+											i == ' ' ? (
+												<Fragment key={index}>
+													<Letter space={true} letter={i} />
+												</Fragment>
+											) : (
+												<Fragment key={index}>
+													<Letter space={false} letter={i} />
+												</Fragment>
+											)
+										)}
+									</div>
 									<p className="mt-3 text-white text-base md:text-lg">
 										Customized Web and Mobile App solutions are more efficient,
 										flexible, and scalable for your needs and growth.
@@ -395,15 +476,26 @@ const Section = () => {
 				<Title title="Projects Section" text="SELECTED PROJECTS" />
 				<ProjectSection />
 			</div> */}
-			<div className=" items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
+			<div className="flex flex-col md:flex-row items-center justify-between md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
+				<div className="mb-8 sm:mb-0">
+					<h1 className="text-white text-2xl md:text-5xl w-64 font-bold">
+						Our Latest Projects
+					</h1>
+					<Button>Get Quote</Button>
+				</div>
+				<div className="bg-transparent min-h-[450px] md:w-[724px] rounded-md">
+					<SkillsSection />
+				</div>
+			</div>
+			{/* <div className="items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
 				<Title title="Projects Section" text="PHOTOGRAPHY & LOGOs" />
 				<SkillsSection />
-			</div>
-			<div className=" items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
+			</div> */}
+			{/* <div className=" items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
 				<Title title="Open Source Exercices" text="github Repositories" />
 				<GithubRepo />
-			</div>
-			<Slider />
+			</div> */}
+			{/* <Slider /> */}
 		</>
 	);
 };
