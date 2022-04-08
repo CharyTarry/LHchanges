@@ -1,10 +1,32 @@
-import React, { Fragment } from 'react';
+import React, { useState, Fragment } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import Lottie from 'react-lottie';
+import * as animationData from '../assets/lotties/contact.json';
+import TextSlider from './textSlider';
+
+const defaultOptions = {
+	loop: true,
+	autoplay: true,
+	animationData: animationData,
+	rendererSettings: {
+		preserveAspectRatio: 'xMidYMid slice',
+	},
+};
 
 const Footer = () => {
+	const [isStopped, setIsStopped] = useState(false);
+	const [isPaused, setIsPaused] = useState(false);
+
 	return (
-		<div className=" bg-black-600 w-screen mt-[-2px] sm:mt-[-5px] pt-2 sm:pt-16">
+		<div
+			className=" bg-black-600 w-screen bg-local bg-cover bg-no-repeat mt-[-2px] sm:mt-[-5px] pt-2 sm:pt-16"
+			style={{
+				backgroundImage: `url(
+				'https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1644582842/90631_ex8fml.png'
+			)`,
+			}}
+		>
 			<div className="md:flex items-center justify-around max-auto md:max-w-7xl mr-auto ml-auto py-4 px-7 md:px-10">
 				<div className="cursor-pointer flex items-start w-64">
 					<Image
@@ -14,7 +36,17 @@ const Footer = () => {
 						height={52}
 					/>
 				</div>
-				<div className="w-64">
+				{/* <div className="md:w-4/12 md:mr-auto md:ml-auto">
+					<Lottie
+						options={defaultOptions}
+						isStopped={isStopped}
+						isPaused={isPaused}
+					/>
+				</div> */}
+				<div className="md:w-6/12 mt-8 md:mt-0 md:mr-auto md:ml-auto">
+					<TextSlider values={values} opacity={opacity} />
+				</div>
+				{/* <div className="w-64">
 					<h1 className="text-white py-2">Company</h1>
 					<ul className="mt-3">
 						{company_links.map((link, index) => (
@@ -55,7 +87,7 @@ const Footer = () => {
 							</li>
 						))}
 					</ul>
-				</div>
+				</div> */}
 				<div className="w-64">
 					<h1 className="text-white py-2">Follow us on social media</h1>
 					<ul className="flex items-center mt-1 ml-7">
@@ -95,6 +127,18 @@ const Footer = () => {
 };
 
 export default Footer;
+
+const opacity = 'opacity-50';
+
+const values = [
+	'AWS',
+	'Tailwind',
+	'React',
+	'Flutter',
+	'NodeJs',
+	'MongoDB',
+	'PostgreSQL',
+];
 
 const company_links = [
 	{
@@ -156,22 +200,22 @@ const contact_links = [
 const social_links = [
 	{
 		name: 'facebook',
-		link: '/',
+		link: 'https://ke.linkedin.com/in/liquid-hack-group-056396213',
 		img: 'https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/c_scale,h_24,w_24/v1644063042/Facebook2_l142hl.png',
 	},
 	{
 		name: 'twitter',
-		link: '/',
+		link: 'https://ke.linkedin.com/in/liquid-hack-group-056396213',
 		img: 'https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/c_scale,h_24,w_24/v1644062630/twitter2_dlzmxw.png',
 	},
 	{
 		name: 'instagram',
-		link: '/',
+		link: 'https://ke.linkedin.com/in/liquid-hack-group-056396213',
 		img: 'https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/c_scale,h_24,w_24/v1644062630/Instagram2_re6zla.png',
 	},
 	{
 		name: 'youtube',
-		link: '/',
+		link: 'https://ke.linkedin.com/in/liquid-hack-group-056396213',
 		img: 'https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/c_scale,h_24,w_24/v1644062631/Youtube_twgpm2.png',
 	},
 ];

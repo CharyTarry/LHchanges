@@ -519,10 +519,9 @@ const Section = () => {
 								/>
 								<div className="md:px-24">
 									<p className="my-3 text-white text-base md:text-lg">
-										Their software can get quite pricy if your company is
-										relying on it for things like email marketing campaigns and
-										lead generation, but the investment is worth it for many
-										customers as you see from their customer testimonial pages.
+										Loved my experience working with the Liquid Hack Team, the
+										guys have excellent services. Definitely coming back in
+										future.
 									</p>
 								</div>
 								<div className=" flex justify-end text-mint fill-current">
