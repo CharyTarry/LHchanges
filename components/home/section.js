@@ -49,13 +49,13 @@ const Section = () => {
 	};
 	return (
 		<>
-			<div className={styles.cursor}>
+			{/* <div className={styles.cursor}>
 				<div className={styles.cursor_small}></div>
 				<div className={styles.cursor_large}></div>
 				<div className={styles.cursor_text}>
 					<div className={styles.text}>GO HERE! GO HERE! GO HERE! GO HERE!</div>
 				</div>
-			</div>
+			</div> */}
 			<div className="bg-black-600 mt-28 min-h-min">
 				<div className="md:flex items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
 					<div className="flex flex-col-reverse md:flex-row items-center w-full">
@@ -496,6 +496,48 @@ const Section = () => {
 				<GithubRepo />
 			</div> */}
 			{/* <Slider /> */}
+			<div className="flex flex-col md:flex-row items-center justify-between md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
+				<div className="flex flex-col-reverse md:flex-row items-center w-full">
+					<div className="md:w-5/12 flex justify-center w-full">
+						<Image
+							src="https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1644582843/Review1_vam1ax.png"
+							alt="liquidhack what our client's say"
+							width={255}
+							height={458}
+						/>
+					</div>
+					<div className="md:w-8/12 w-full flex justify-center">
+						<div className="w-full">
+							<h1 className="text-white text-2xl mb-8 md:mb-10 md:text-5xl font-bold md:w-5/12">
+								What Our Client Say
+							</h1>
+							<div className=" w-full">
+								<Image
+									src="https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/c_scale,h_88,w_74/v1649417595/TalkUp_fzgwqp.png"
+									width={88}
+									height={74}
+								/>
+								<div className="md:px-24">
+									<p className="my-3 text-white text-base md:text-lg">
+										Their software can get quite pricy if your company is
+										relying on it for things like email marketing campaigns and
+										lead generation, but the investment is worth it for many
+										customers as you see from their customer testimonial pages.
+									</p>
+								</div>
+								<div className=" flex justify-end text-mint fill-current">
+									<Image
+										className="rotate-180 "
+										src="https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/c_scale,h_88,w_74/v1649417595/TalkUp_fzgwqp.png"
+										width={88}
+										height={74}
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</>
 	);
 };
