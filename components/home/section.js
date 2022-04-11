@@ -411,6 +411,7 @@ const Section = () => {
 									src="https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/c_scale,h_88,w_74/v1649417595/TalkUp_fzgwqp.png"
 									width={88}
 									height={74}
+									alt="liquidhack what our client's say quote"
 								/>
 								<div className="md:px-24">
 									<p className="my-3 text-white text-base md:text-lg">
@@ -425,6 +426,7 @@ const Section = () => {
 										src="https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/c_scale,h_88,w_74/v1649417595/TalkUp_fzgwqp.png"
 										width={88}
 										height={74}
+										alt="liquidhack what our client's say quote"
 									/>
 								</div>
 							</div>
