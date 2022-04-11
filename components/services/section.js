@@ -220,9 +220,9 @@ const Section = () => {
 				</div>
 			</div>
 
-			<div className="bg-black-600 mt-16 min-h-min">
+			<div className="bg-black-600 md:mt-16 min-h-min">
 				<div className="md:flex items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
-					<div className="md:flex items-center w-full">
+					<div className="flex flex-col-reverse md:flex-row items-center w-full">
 						<div className="md:flex justify-start md:w-6/12 w-full">
 							<Image
 								src="https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1644582843/Website2_yr66gy.png"
@@ -236,7 +236,7 @@ const Section = () => {
 								initiallyVisible={false}
 								animateIn="animate__fadeInRightBig"
 							>
-								<div className="md:w-10/12 w-full">
+								<div className="md:w-10/12 w-full mb-8 sm:mb-0">
 									<div style={style.words}>
 										{'Machine Learning'.split('').map((i, index) =>
 											i == ' ' ? (
@@ -271,7 +271,7 @@ const Section = () => {
 				</div>
 			</div>
 
-			<div className="bg-black-600 mt-14 min-h-min">
+			<div className="bg-black-600 md:mt-14 min-h-min">
 				<div className="md:flex items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
 					<div className="md:flex items-center w-full">
 						<div className="flex justify-start mb-8 md:mb-0 md:w-6/12 w-full">
@@ -315,9 +315,9 @@ const Section = () => {
 				</div>
 			</div>
 
-			<div className="bg-black-600 mt-16 min-h-min">
+			<div className="bg-black-600 md:mt-16 min-h-min">
 				<div className="md:flex items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
-					<div className="md:flex items-center w-full">
+					<div className="flex flex-col-reverse md:flex-row items-center w-full">
 						<div className="md:flex justify-start md:w-6/12 w-full">
 							<Image
 								src="https://res.cloudinary.com/dgisuffs0/image/upload/q_auto/v1644582843/webDesign1_bdqkik.png"
@@ -331,7 +331,7 @@ const Section = () => {
 								initiallyVisible={false}
 								animateIn="animate__fadeInRightBig"
 							>
-								<div className="md:w-10/12 w-full">
+								<div className="md:w-10/12 w-full mb-8 sm:mb-0">
 									<div style={style.words}>
 										{'Data Analytics'.split('').map((i, index) =>
 											i == ' ' ? (
@@ -368,8 +368,8 @@ const Section = () => {
 				</div>
 			</div>
 
-			<div className="bg-black-600 bg-local bg-cover bg-no-repeat min-h-min">
-				<div className="md:flex pt-32 items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
+			<div className="bg-black-600 md:mt-16 bg-local bg-cover bg-no-repeat min-h-min">
+				<div className="md:flex items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
 					<div className="md:flex items-center w-full">
 						<div className="flex justify-start mb-8 md:mb-0 md:w-7/12 w-full">
 							<AnimationOnScroll
