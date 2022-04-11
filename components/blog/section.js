@@ -1,14 +1,14 @@
 import React from 'react';
 import Image from 'next/image';
+import Title from '../title/index';
 
 const Section = () => {
 	return (
 		<>
 			<div className="bg-black-600 mt-28 min-h-screen">
-				<p className="text-white pt-8  py-4 px-7 md:px-10">Blog</p>
-				<h1 className="text-white py-4 px-7 md:px-10 text-3xl md:text-5xl font-bold">
-					Our Blog
-				</h1>
+				<div className="px-7 md:px-10">
+					<Title title="Our Blog" text="Blog" />
+				</div>
 				<h4 className="text-white py-4 px-7 md:px-10 md:w-5/12 w-full">
 					What is happening? News, team stories and industry insights from
 					Digital Storm. Keep updated today!

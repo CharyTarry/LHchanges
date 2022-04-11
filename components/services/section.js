@@ -38,39 +38,33 @@ const Section = () => {
 
 	return (
 		<>
-			<div className="bg-black-600 mt-16 min-h-screen">
+			<div className="bg-black-600 mt-14 min-h-screen">
 				<div className="md:flex items-center md:max-w-7xl md:mr-auto md:ml-auto py-4 px-7 md:px-10">
 					<div className="md:flex items-center w-full">
 						<div className="flex justify-start mb-8 md:mb-0 md:w-6/12 w-full">
-							<AnimationOnScroll
-								initiallyVisible={false}
-								animateIn="animate__fadeInLeftBig"
-							>
-								<div className="md:w-9/12 w-full">
-									<Title title="U.I & U.X" text="Services" />
+							<div className="md:w-9/12 w-full">
+								<Title title="U.I & U.X" text="Services" />
 
-									<h4 className="mt-5 text-white text-base md:text-2xl">
-										Our focus is mainly on design, usability, creativity, and
-										content site management appearance and functionality.
-									</h4>
-									<p className="mt-8 text-white">
-										Integrating these elements will maximize the Web and App’s
-										overall usability and performance. These elements include an
-										easy-to-navigate interface, appropriate use of graphics and
-										images, well-written and well-placed text, and a color
-										scheme.
-									</p>
-									<ul className="mt-8 mb-8 list-disc  text-white  w-full px-14 md:px-32">
-										<li>Strategy</li>
-										<li>UI + UX Design</li>
-										<li>Usability Testing</li>
-										<li>Technical Planning</li>
-										<li>Development</li>
-										<li>Quality Assuarance</li>
-										<li>Ongoing Iteration</li>
-									</ul>
-								</div>
-							</AnimationOnScroll>
+								<h4 className="mt-5 text-white text-base md:text-2xl">
+									Our focus is mainly on design, usability, creativity, and
+									content site management appearance and functionality.
+								</h4>
+								<p className="mt-8 text-white">
+									Integrating these elements will maximize the Web and App’s
+									overall usability and performance. These elements include an
+									easy-to-navigate interface, appropriate use of graphics and
+									images, well-written and well-placed text, and a color scheme.
+								</p>
+								<ul className="mt-8 mb-8 list-disc  text-white  w-full px-14 md:px-32">
+									<li>Strategy</li>
+									<li>UI + UX Design</li>
+									<li>Usability Testing</li>
+									<li>Technical Planning</li>
+									<li>Development</li>
+									<li>Quality Assuarance</li>
+									<li>Ongoing Iteration</li>
+								</ul>
+							</div>
 						</div>
 						<div className="md:w-5/12 w-full">
 							<Image

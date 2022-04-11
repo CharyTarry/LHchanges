@@ -68,10 +68,6 @@ const Section = () => {
 					<div className="md:flex items-end w-full">
 						<div className="flex justify-start mb-8 md:mb-0 md:w-6/12 w-full">
 							<div className="md:w-9/12 w-full">
-								{/* <h5 className="mt-3 text-white">About Us</h5>
-								<h1 className="mt-0.5 text-white pt-8 text-3xl md:text-4xl font-bold">
-									Who We Are
-								</h1> */}
 								<Title title="Who We Are" text="About us" />
 								<h4 className=" text-white text-base md:text-2xl">
 									Liquid Hack Group is just good vibes when it comes to simple,
