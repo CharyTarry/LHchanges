@@ -44,7 +44,21 @@ const Footer = () => {
 					/>
 				</div> */}
 				<div className="md:w-6/12 mt-8 md:mt-0 md:mr-auto md:ml-auto">
-					<TextSlider values={values} opacity={opacity} />
+					{/* <TextSlider values={values} opacity={opacity} /> */}
+					<marquee className="flex w-auto mt-2 text-white text-base md:text-2xl">
+						<div className="flex space-x-6">
+							<p>MongoDB</p>
+							<p>PostgreSQL</p>
+							<p>NGINX</p>
+							<p>AWS</p>
+							<p>NodeJS</p>
+							<p>Javascript</p>
+							<p>Tailwind</p>
+							<p>React</p>
+							<p>React Native</p>
+							<p>Flutter</p>
+						</div>
+					</marquee>
 				</div>
 				{/* <div className="w-64">
 					<h1 className="text-white py-2">Company</h1>

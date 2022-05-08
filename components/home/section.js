@@ -1,5 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import Typewriter from 'typewriter-effect';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { gsap } from 'gsap';
@@ -219,7 +220,11 @@ const Section = () => {
 									{/* <p>Site’s appearance and
 										functionality. Integrating these elements will maximize the
 										site’s overall usability and performance.</p> */}
-									<Button>Learn More</Button>
+									<Link href="/services">
+										<a>
+											<Button>Learn More</Button>
+										</a>
+									</Link>
 								</div>
 							</AnimationOnScroll>
 						</div>
@@ -301,7 +306,11 @@ const Section = () => {
 										intelligence software to help your company gain more
 										insights based on its daily generated data.
 									</p> */}
-									<Button>Discover More</Button>
+									<Link href="/services">
+										<a>
+											<Button>Discover More</Button>
+										</a>
+									</Link>
 								</div>
 							</AnimationOnScroll>
 						</div>
@@ -351,7 +360,11 @@ const Section = () => {
 										Customized Web and Mobile App solutions are more efficient,
 										flexible, and scalable for your needs and growth.
 									</p>
-									<Button>Learn More</Button>
+									<Link href="/services">
+										<a>
+											<Button>Learn More</Button>
+										</a>
+									</Link>
 								</div>
 							</AnimationOnScroll>
 						</div>
@@ -376,7 +389,11 @@ const Section = () => {
 					<h1 className="text-white text-2xl md:text-5xl w-64 font-bold">
 						Our Latest Projects
 					</h1>
-					<Button>Get Quote</Button>
+					<Link href="/contact">
+						<a>
+							<Button>Get Quote</Button>
+						</a>
+					</Link>
 				</div>
 				<div className="bg-transparent min-h-[450px] md:w-[724px] rounded-md">
 					<SkillsSection />
